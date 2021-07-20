@@ -6,7 +6,7 @@ fetch(`${Api_url}/users`)
 .then(response => response.json())
 .then(users => {
     const tpl = users.map(user => `<li>${user.name} ${user.email}</li>`);
-    HTMLResponse.innerHTML = `<ul>${tpl}</ul>`
+    HTMLResponse.innerHTML = `<ul class="lista">${tpl}</ul>`
 })
 .then(response =>console.log(response))
 // const xhr = new XMLHttpRequest();
